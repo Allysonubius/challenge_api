@@ -17,7 +17,7 @@ public class LogController {
     @Autowired
     LogService logService;
 
-    @GetMapping(value="logs")
+    @GetMapping(value="/logs")
     @ApiOperation(value="REST API - INFO LOGS")
     public ResponseEntity<List<LogModels>> getLog(){
         List<LogModels> listLog = this.logService.getLogDB();

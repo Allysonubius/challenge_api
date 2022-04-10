@@ -1,5 +1,6 @@
 package com.project.prova.controller;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import com.project.prova.models.*;
 import com.project.prova.service.*;
@@ -30,6 +31,10 @@ public class CarsController {
     @ApiOperation(value="API REST - INSERT CAR TO LIST API")
     public ResponseEntity<CarsModel> createCar(@RequestBody CarsModel carList){
         CarsModel postCar = this.carsServiceController.postCarApi(carList);
+        LogModels log = new LogModels();
+        log.setCar_id(postCar.get_id());
+        log.setDate_hora(LocalDateTime.now());
+        this.logService.postLogDB(log);
         return ResponseEntity.ok().body(postCar);
     }
 

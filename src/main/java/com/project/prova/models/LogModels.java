@@ -2,6 +2,7 @@ package com.project.prova.models;
 
 import java.time.*;
 import javax.persistence.*;
+
 import lombok.*;
 
 @Data
@@ -14,7 +15,10 @@ import lombok.*;
 public class LogModels {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
     private LocalDateTime date_hora;
-    private Long car_id;
+
+    private String car_id;
 }
