@@ -6,7 +6,7 @@
 </div>
 
 <div>
-<h3>API EXTERNA A SER CONSUMIDA</h3>
+<h3>API EXTERNA CONSUMIDA</h3>
 <table>
   <tr>
     <th>METODO</th>
@@ -22,7 +22,7 @@
   </tr>
 </table>
 </div>
-
+<h3>API EXTERNA IMPLEMENTADA</h3>
 <div>
 <table>
   <tr>
